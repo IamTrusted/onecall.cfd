@@ -1,0 +1,19 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "onecallcfd",
+  "pages_build_output_dir": ".",
+  "compatibility_date": "2026-09-17",
+  "d1_databases": [
+    {
+      "binding": "ANALYTICS_DB",
+      "database_name": "callme-live-analytics",
+      "database_id": "4e8d37bb-3dc8-4731-b049-d8961088e63f"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "VIDEOS",
+      "bucket_name": "onecallcfd-videos"
+    }
+  ]
+}

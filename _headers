@@ -1,0 +1,47 @@
+# Cloudflare Pages Headers for CallMe Live
+# Security, Performance, SEO
+
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+
+# HTML - short cache, must revalidate for fresh content
+/index.html
+  Cache-Control: public, max-age=300, must-revalidate
+/*.html
+  Cache-Control: public, max-age=300, must-revalidate
+
+# Stylesheets - medium cache + immutable when hashed later
+/styles.css
+  Cache-Control: public, max-age=86400
+
+# JavaScript - medium cache + immutable when hashed later
+/script.js
+  Cache-Control: public, max-age=86400
+
+# Common image formats - 1 year immutable + CDN cache
+# (Note: AI images from coresg-normal.trae.ai cache themselves at the API level)
+/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+/*.jpeg
+  Cache-Control: public, max-age=31536000, immutable
+/*.png
+  Cache-Control: public, max-age=31536000, immutable
+/*.webp
+  Cache-Control: public, max-age=31536000, immutable
+/*.svg
+  Cache-Control: public, max-age=31536000, immutable
+/*.ico
+  Cache-Control: public, max-age=31536000, immutable
+
+# Fonts - long cache
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+/*.woff
+  Cache-Control: public, max-age=31536000, immutable
+/*.ttf
+  Cache-Control: public, max-age=31536000, immutable

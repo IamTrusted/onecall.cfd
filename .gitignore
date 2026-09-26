@@ -1,0 +1,41 @@
+# OS
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependencies (this is a static site - no deps needed)
+node_modules/
+bower_components/
+
+# Build output (if any added later)
+dist/
+build/
+.cache/
+
+# Env
+.env
+.env.local
+.env.*.local
+
+# Temp
+*.tmp
+*.bak
+*.old
+.wrangler/

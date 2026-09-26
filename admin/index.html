@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en"><head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow"><title>CallMe Live - Analytics</title>
+  <link rel="stylesheet" href="admin.css?v=device-browser-20260917"><link rel="stylesheet" href="analytics-overview.css?v=device-browser-20260917"><link rel="stylesheet" href="profiles.css?v=profiles-active-country-20260917"><link rel="stylesheet" href="videos.css?v=video-library-20260917">
+</head><body>
+  <main class="shell">
+    <section id="login" class="login-card"><p class="eyebrow">PRIVATE AREA</p><h1>Traffic analytics</h1><p>Enter your admin login details to view live traffic.</p><form id="loginForm"><label>Username<input id="username" type="text" autocomplete="username" value="Admin" required></label><label>Admin password<input id="token" type="password" autocomplete="current-password" required></label><button>Open dashboard</button><p id="loginError" class="error" role="alert"></p></form></section>
+    <section id="dashboard" hidden><div class="dashboard-layout"><aside class="dashboard-nav" aria-label="Dashboard sections"><div class="nav-brand">CALLME LIVE <span>PRIVATE</span></div><button class="nav-link active" type="button" data-panel="overview">Overview</button><button class="nav-link" type="button" data-panel="profiles">Profiles</button><button class="nav-link" type="button" data-panel="videos">Videos</button><button id="logout" class="quiet nav-lock">Lock</button></aside><div class="dashboard-content">
+      <div id="overview" class="dashboard-panel"><header><div><p class="eyebrow">TRAFFIC TRACKING</p><h1>Dashboard overview</h1><p id="updated">Loading...</p></div></header>
+        <div class="toolbar"><label>Time range <select id="range"><option value="today">Today</option><option value="yesterday">Yesterday</option><option value="7d">Last 7 days</option></select></label><button id="refresh" class="quiet">Refresh</button></div>
+        <div class="metrics"><article><span>Live visitors</span><strong id="liveCount">-</strong><small>active in last 2 minutes</small></article><article><span>Page views</span><strong id="pageviews">-</strong><small>selected period</small></article></div>
+        <section class="card"><h2>Traffic over time</h2><div id="timeline" class="bars"></div></section>
+        <div class="grid"><section class="card"><h2>Countries</h2><div id="countries"></div></section><section class="card"><h2>Traffic sources / platforms</h2><div id="sources"></div></section></div>
+        <div class="grid"><section class="card"><h2>Visitor devices</h2><p class="card-note">Desktop, mobile, tablet</p><div id="devices"></div></section><section class="card"><h2>Browsers</h2><p class="card-note">Browser used by visitors</p><div id="browsers"></div></section></div>
+        <section class="card"><h2>Visitors online now</h2><div class="table-wrap"><table><thead><tr><th>Country</th><th>Source</th><th>Device</th><th>Browser</th><th>Last seen</th></tr></thead><tbody id="liveRows"></tbody></table></div></section>
+      </div>
+      <div id="profiles" class="dashboard-panel" hidden><header><div><p class="eyebrow">PROFILE IMAGES</p><h1>Manage profiles</h1><p class="muted">Choose a country, then replace any of its 16 profile images.</p></div></header><section class="card"><div id="profileCountries" class="profile-tabs"><button data-country="usa" class="active">USA</button><button data-country="uk">UK</button><button data-country="canada">Canada</button><button data-country="germany">Germany</button></div><p id="profileStatus" class="muted" aria-live="polite"></p><div id="profileGrid" class="profile-image-grid"></div></section></div>
+      <div id="videos" class="dashboard-panel" hidden><header><div><p class="eyebrow">LIVE CALL LIBRARY</p><h1>Videos</h1><p class="muted">Upload videos for the website’s random video-call player. MP4, WebM, OGV, or MOV; maximum 100 MB each.</p></div></header><section class="card"><form id="videoUploadForm" class="video-upload"><label>Choose video<input id="videoFile" type="file" accept="video/mp4,video/webm,video/ogg,video/quicktime" required></label><button>Upload video</button><span id="videoStatus" class="muted" aria-live="polite"></span></form><div id="videoList" class="video-library"><p class="empty">Loading videos…</p></div></section></div>
+    </div></div></section>
+  </main><script src="admin.js?v=dashboard-profile-source-20260917"></script>
+</body></html>

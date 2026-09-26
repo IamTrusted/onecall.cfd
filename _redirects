@@ -1,0 +1,9 @@
+# Cloudflare Pages Redirects
+# Clean URL routes -> index.html for SPA-like fallback (if added later)
+/home                /                      301
+/women               /#profiles             301
+/usa                 /#profiles             301
+/uk                  /#profiles             301
+/canada              /#profiles             301
+/germany             /#profiles             301
+/join                /#features             301
