@@ -43,12 +43,19 @@ body {
     top: 50%;
     z-index: 20;
     transform: translateY(-50%);
-    width: min(300px, 18vw);
+    width: 160px;
     text-align: center;
     overflow: hidden;
 }
 .sidebar-ad-left { left: 8px; }
 .sidebar-ad-right { right: 8px; }
+.sidebar-ad iframe {
+    display: block;
+    width: 160px;
+    max-width: 100%;
+    margin: 0 auto;
+    border: 0;
+}
 .ad-frame {
     display: block;
     max-width: 100%;
@@ -56,13 +63,9 @@ body {
     border: 0;
     background: transparent;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1300px) {
     .sidebar-ad {
-        position: static;
-        transform: none;
-        width: min(728px, calc(100% - 40px));
-        max-width: 100%;
-        margin: 0 auto 16px;
+        display: none !important;
     }
 }
 
@@ -146,14 +149,23 @@ body {
     min-width: 0;
     text-align: center;
     overflow: hidden;
+    padding: 0 15px;
 }
 
 .header-ad .ad-frame,
-.ad-banner .ad-frame {
+.header-ad iframe {
     display: block;
+    width: 468px;
+    height: 60px;
     max-width: 100%;
     margin: 0 auto;
     border: 0;
+}
+
+@media (max-width: 820px) {
+    .header-ad {
+        display: none !important;
+    }
 }
 
 .logo {
@@ -399,7 +411,24 @@ body {
     border: 0;
 }
 
-.bottom-ad { margin-top: 30px; margin-bottom: 0; }
+.bottom-ad {
+    width: min(300px, 100%);
+    height: 250px;
+    min-height: 250px;
+    margin: 40px auto 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.bottom-ad .ad-frame,
+.bottom-ad iframe {
+    width: 300px !important;
+    height: 250px !important;
+    max-width: 100%;
+    border: 0;
+}
 
 /* Banner Links - Hide browser bottom-left URL preview while keeping clean pointer cursor */
 .ad-banner a,
